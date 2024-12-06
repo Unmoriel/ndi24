@@ -12,7 +12,7 @@
   "Les récifs coralliens, structures solides et résistantes, forment la charpente des océans, tout comme les os soutiennent le corps humain. Ils abritent une biodiversité immense et jouent un rôle crucial dans la protection des côtes, assurant la stabilité de l’ensemble des écosystèmes marins."];
   const idPart = ref();
 
-  function openFlash(id) {
+  function openFlash(id: number) {
     flash.value = true;
     idPart.value = id;
   }

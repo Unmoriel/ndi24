@@ -1,24 +1,25 @@
 <script setup lang="ts">
-  const props = defineProps({
-    leave: Function,
-    title: String,
-    text: String
-  });
+const props = defineProps<{
+    leave: () => void;
+    title: string;
+    text: string;
+}>();
+
 </script>
 
 <template>
-  <transition name="fade">
-    <div>
-      <button @click="leave">X</button>
-      <h2>{{ title }}</h2>
-      <p>{{ text }}</p>
-    </div>
-  </transition>
+    <transition name="fade">
+        <div>
+            <button @click="props.leave">X</button>
+            <h2>{{ title }}</h2>
+            <p>{{ text }}</p>
+        </div>
+    </transition>
 
 </template>
 
 <style scoped>
-  div {
+div {
     background-color: aliceblue;
     position: fixed;
     left: 50%;
@@ -28,9 +29,9 @@
     height: 65vh;
     border-radius: 5%;
     border: 1px solid deepskyblue;
-  }
+}
 
-  button {
+button {
     position: fixed;
     left: 90%;
     top: 3%;
@@ -39,28 +40,28 @@
     border-radius: 35%;
     font-size: 20px;
     font-weight: bold;
-  }
+}
 
-  button:hover {
+button:hover {
     background-color: orangered;
-  }
+}
 
-  .fade-enter-active, .fade-leave-active {
+.fade-enter-active, .fade-leave-active {
     transition: opacity 1s;
-  }
+}
 
-  .fade-enter, .fade-leave-to {
+.fade-enter, .fade-leave-to {
     opacity: 0;
-  }
+}
 
-  p {
+p {
     font-size: 20px;
     padding-top: 10%;
     padding-left: 3%;
     padding-right: 3%;
-  }
+}
 
-  h2 {
+h2 {
     font-size: 30px;
-  }
+}
 </style>
