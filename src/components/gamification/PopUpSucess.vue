@@ -48,14 +48,14 @@ watch(
                 <img
                     v-for="i in nbStar"
                     :key="`yellow-star-${i}`"
-                    src="../../assets/img/star-yellow.png"
+                    src="@/assets/img/star-yellow.png"
                     alt="yellow star"
                     class="star-img"
                 />
                 <img
                     v-for="i in nbStarMax - nbStar"
                     :key="`white-star-${i}`"
-                    src="../../assets/img/star-white.png"
+                    src="@/assets/img/star-white.png"
                     alt="white star"
                     class="star-img"
                 />
